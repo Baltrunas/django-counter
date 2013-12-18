@@ -1,0 +1,50 @@
+{% extends "counter/base.html" %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+{% for group in groups %}
+	<h3>{{ group.name }}</h3>
+	<div>
+	{% if group.countdowns.count %}
+		<h4>Count Down</h4>
+		{% for countdown in group.countdowns.all %}
+			<p>
+
+				<b>{{ countdown.name }}</b>
+				<time id='pageTimer'>{{ countdown.to_datetime|date:"d-m-Y H:i:s" }}</time>
+
+{% comment %}
+
+<script type="text/javascript">
+// var timespan = countdown(start|callback, end|callback, units, max, digits);
+var timerId =
+	countdown(
+		new Date({{ countdown.to_datetime|date:"Y, m, d" }}),
+		function(ts) {
+			document.getElementById('pageTimer').innerHTML = ts.toHTML("strong");
+			console.log(ts);
+		},
+		countdown.HOURS|countdown.MINUTES|countdown.SECONDS);
+		// later on this timer may be stopped
+		// window.clearInterval(timerId);
+</script>
+{% endcomment %}
+
+			</p>
+		{% endfor %}
+	{% endif %}
+
+		{% if group.countcounts.count %}
+			<h4>Count Count</h4>
+			{% for countcount in group.countcounts.all %}
+				<p>
+					<b>{{ countcount.name }}</b>
+					<span>{{ countcount.count }}</span>
+				</p>
+			{% endfor %}
+		{% endif %}
+	</div>
+{% endfor %}
+
+{% endblock %}

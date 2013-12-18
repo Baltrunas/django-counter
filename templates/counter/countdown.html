@@ -1,0 +1,115 @@
+<link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="/static/js/countdown.js"></script>
+<script type="text/javascript" src="/static/js/jquery-2.0.3.min.js"></script>
+{# <link rel="stylesheet" type="text/css" href="/static/css/counter.css"> #}
+<style type="text/css">
+time {
+	letter-spacing: 2px;
+	display: inline-block;
+	font-size: 24px;
+	font-family: 'ABeeZee', sans-serif;
+}
+
+time h3 {
+	font-size: 20px;
+	text-align: center;
+}
+
+time span {
+	float: left;
+	padding: 10px 2px;
+	text-align: center;
+	display: block;
+	background: rgba(255,255,255,0.5);
+}
+
+.days {
+	/*background: blue;*/
+}
+
+.days:after {
+	content: 'дней';
+	display: block;
+	/*background: green;*/
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	width: 33px;
+	color: #999;
+	font-size: 8px;
+}
+
+.hours:after {
+	content: 'часов';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: #999;
+	font-size: 8px;
+}
+
+.minutes:after {
+	content: 'минут';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: #999;
+	font-size: 8px;
+}
+
+.seconds:after {
+	content: 'секунд';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: #999;
+	font-size: 8px;
+}
+</style>
+
+<time id='countdown_{{ countdown.id }}'>
+	<h3>{{ countdown.name }}</h3>
+	{# {{ countdown.to_datetime|date:"d-m-Y H:i:s" }} #}
+	<span class="days">0</span>
+	<span>:</span>
+	<span class="hours">0</span>
+	<span>:</span>
+	<span class="minutes">0</span>
+	<span>:</span>
+	<span class="seconds">0</span>
+</time>
+
+<script type="text/javascript">
+var countdown_{{ countdown.id }} = countdown(
+	new Date({{ countdown.to_datetime|date:"Y, m, d" }}),
+	function(ts) {
+		// console.log(ts);
+		if (ts.days || ts.hours || ts.minutes || ts.seconds) {
+			$('#countdown_{{ countdown.id }} .days').text(ts.days);
+			if (ts.hours > 9) {
+				$('#countdown_{{ countdown.id }} .hours').text(ts.hours);
+			} else {
+				$('#countdown_{{ countdown.id }} .hours').text('0' + ts.hours);
+			}
+			if (ts.minutes > 9) {
+				$('#countdown_{{ countdown.id }} .minutes').text(ts.minutes);
+			} else {
+				$('#countdown_{{ countdown.id }} .minutes').text('0' + ts.minutes);
+			}
+			if (ts.seconds > 9) {
+				$('#countdown_{{ countdown.id }} .seconds').text(ts.seconds);
+			} else {
+				$('#countdown_{{ countdown.id }} .seconds').text('0' + ts.seconds);
+			}
+		} else {
+			window.clearInterval(countdown_{{ countdown.id }});
+		}
+	},
+	countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS
+);
+</script>

@@ -1,0 +1,61 @@
+Счётчик дней и времени и количеств
+
+Libs:
+	☐ http://countdownjs.org/readme.html
+	☐ http://www.webappers.com/2013/05/27/create-a-clock-timer-or-countdown-with-flipclock-js/
+	☐ http://keith-wood.name/countdown.html
+
+Типы и модели
+	☐ Группы
+		☐ name
+
+	Обратный отсчет
+		☐ name
+		☐ to_datetime
+
+	По времени (с момента первого показа или загрузки страници (для акций))
+		☐ name
+		☐ total_days_and_time
+		☐ first_show_or_start
+
+	Счет с момента
+		☐ name
+		☐ from_datetime
+
+		Запись момента сброса
+	Счет + 0 -
+		☐ name
+		☐ count
+
+		Запись момента изменения
+	Total Time
+		☐ name
+		☐ total_time
+		☐ Start Time
+		☐ Stop Time
+
+		Запись периода
+
+Сложные счетчики по дням, часам и т д
+
+Примеры
+	Не пью 100 дней 
+	Не курю 30 часов
+	Выебал 100 телок 
+
+Под вопросом:
+ ☐ Finished
+ ☐ Target
+
+	☐ Группы
+		☐ slug
+		☐ description
+		☐ order
+		☐ Вложенные
+
+	☐ Теги
+
+	☐ Параметризованные теги
+
+	☐ Счет + 0 -
+		☐ Дробное?
