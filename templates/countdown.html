@@ -1,0 +1,43 @@
+{% load i18n %}
+
+{% if countdown.is_active %}
+	<time class="b-countdown m-{{ modifer }} countdown_{{ countdown.id }}">
+		{% if countdown.icon %}
+			<img src="{{ countdown.icon.url }}" class="b-countdown__icon" alt="{{ countdown.name }}">
+		{% endif %}
+		<strong class="b-countdown__title">{{ countdown.name|safe }}</strong>
+		<div class="b-countdown-part">
+			<span class="b-countdown__value days">0</span>
+			<span class="b-countdown__label">{% trans "days" %}</span>
+		</div>
+
+		<span class="b-countdown__delimiter">:</span>
+
+		<div class="b-countdown-part">
+			<span class="b-countdown__value hours">0</span>
+			<span class="b-countdown__label">{% trans "hours" %}</span>
+		</div>
+
+		<span class="b-countdown__delimiter">:</span>
+
+		<div class="b-countdown-part">
+			<span class="b-countdown__value minutes">0</span>
+			<span class="b-countdown__label">{% trans "minutes" %}</span>
+		</div>
+
+		<span class="b-countdown__delimiter">:</span>
+
+		<div class="b-countdown-part">
+			<span class="b-countdown__value seconds">0</span>
+			<span class="b-countdown__label">{% trans "seconds" %}</span>
+		</div>
+	</time><!-- .m-{{ modifer }} .countdown_{{ countdown.id }} -->
+{% endif %}
+
+<script type="text/javascript">
+
+$('.countdown_{{ countdown.id }}').countdown({
+	'date': new Date({{ countdown.to_datetime|date:"Y, m, d, H, i, s" }})
+});
+
+</script>

@@ -1,0 +1,418 @@
+/**
+ **************************
+ DEFAULT
+ **************************
+*/
+.b-countdown {
+	display: inline-block;
+	letter-spacing: 2px;
+}
+
+.b-countdown__title {
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.b-countdown-part {
+	display: block;
+	float: left;
+	width: 45px;
+	text-align: center;
+}
+
+.b-countdown__value {
+	display: block;
+	text-align: center;
+	font-size: 24px;
+}
+
+.b-countdown__label {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	color: #999;
+	text-align: center;
+	font-size: 8px;
+}
+
+.b-countdown__delimiter {
+	float: left;
+	text-align: center;
+	font-size: 24px;
+}
+
+
+/**
+ **************************
+ EGGO
+ **************************
+*/
+.m-eggo {
+	padding: 20px;
+	width: 250px;
+	border: 1px solid #ED5A5A;
+	border-radius: 6px;
+	box-shadow: 0 0 10px #fff;
+}
+
+.m-eggo .b-countdown__icon {
+	display: block;
+	margin: 0 auto;
+	margin-top: -40px;
+}
+
+.m-eggo .b-countdown__title {
+	margin-top: 15px;
+	color: #3d3d3d;
+	text-shadow: 0 0 2px rgba(61,61,61,.3);
+	font-size: 25px;
+}
+
+.m-eggo .b-countdown-part {
+	margin-left: 5px;
+	width: 50px;
+}
+
+.m-eggo .b-countdown__value {
+	padding: 3px;
+	width: 40px;
+	height: 35px;
+	border-radius: 3px;
+	background: #3d3f3f;
+	box-shadow: 0 0 10px rgba(61,63,63,.5);
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 0 1px #fff;
+	line-height: 35px;
+}
+
+.m-eggo .b-countdown__label {
+	margin: 3px auto;
+	color: #111;
+	font-size: 10px;
+}
+
+
+/**
+ **************************
+ COMMING-SOON__DARK
+ **************************
+*/
+.m-comming-soon__dark {
+	padding: 0 50px;
+	width: 300px;
+	height: 200px;
+	background: #222;
+}
+
+.m-comming-soon__dark .b-countdown__title {
+	margin-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #181818;
+	background: #222;
+	color: #fff;
+	text-shadow: 0 0 5px rgba(255,255,255,.3);
+	font: 30px 'Junge', serif;
+}
+
+.m-comming-soon__dark .b-countdown-part {
+	overflow: hidden;
+	margin-left: 12px;
+	width: 60px;
+}
+
+.m-comming-soon__dark .b-countdown__value {
+	width: 60px;
+	height: 55px;
+	border-radius: 3px;
+	background: #1a1a1a;
+	box-shadow: 0 1px #222, 0 2px #1a1a1a, 0 3px #222, 0 4px #1a1a1a;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+}
+
+.m-comming-soon__dark .b-countdown__number {
+	display: inline-block;
+	text-transform: full-width;
+	line-height: 55px;
+	-webkit-transform: scale(1.0, 1.5);
+	-moz-transform: scale(1.0, 1.5);
+	-ms-transform: scale(1.0, 1.5);
+	-o-transform: scale(1.0, 1.5);
+	transform: scale(1.0, 1.5);
+}
+
+.m-comming-soon__dark .b-countdown__value:before, 
+.m-comming-soon__dark .b-countdown__number:before {
+	position: relative;
+	display: block;
+	height: 1px;
+	background: #222;
+	box-shadow: 0 0 10px 3px #222;
+	content: ' ';
+}
+
+.m-comming-soon__dark .b-countdown__value:before {
+	top: 26px;
+}
+
+.m-comming-soon__dark .b-countdown__number:before {
+	top: 26px;
+}
+
+.m-comming-soon__dark .b-countdown__label {
+	margin: 8px auto;
+	color: #fff;
+	font-size: 13px;
+}
+
+
+/**
+ **************************
+ COMMING-SOON__LIGHT
+ **************************
+*/
+.m-comming-soon__light {
+	padding: 0 50px;
+	width: 300px;
+	height: 200px;
+	background: #fff;
+}
+
+.m-comming-soon__light .b-countdown__title {
+	margin-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #d8d9dd;
+	background: #fff;
+	color: #111;
+	text-shadow: 0 0 1px rgba(0,0,0,.3);
+	font: normal 30px 'Junge', serif;
+}
+
+.m-comming-soon__light .b-countdown-part {
+	overflow: hidden;
+	margin-left: 12px;
+	width: 60px;
+}
+
+.m-comming-soon__light .b-countdown__value {
+	padding: 5px 0;
+	width: 60px;
+	height: 55px;
+	border-radius: 3px;
+	background: #eee;
+	box-shadow: 0 1px #fff, 0 2px #eee, 0 3px #fff, 0 4px #ddd;
+	color: #333;
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.m-comming-soon__light .b-countdown__number {
+	display: inline-block;
+	text-transform: full-width;
+	line-height: 55px;
+	-webkit-transform: scale(1.0, 1.5);
+	-moz-transform: scale(1.0, 1.5);
+	-ms-transform: scale(1.0, 1.5);
+	-o-transform: scale(1.0, 1.5);
+	transform: scale(1.0, 1.5);
+}
+
+.m-comming-soon__light .b-countdown__value:before, 
+.m-comming-soon__light .b-countdown__number:before {
+	position: relative;
+	top: 26px;
+	display: block;
+	height: 1px;
+	background: #fff;
+	box-shadow: 0 0 10px 2px #fff;
+	content: ' ';
+}
+
+.m-comming-soon__light .b-countdown__label {
+	margin: 8px auto;
+	color: #333;
+	font-size: 13px;
+}
+
+
+/**
+ **************************
+ MINIMAL
+ **************************
+*/
+.m-minimal {
+	padding: 10px 20px;
+	width: 300px;
+	height: 130px;
+	background: transparent;
+}
+
+.m-minimal .b-countdown__title {
+	margin-top: 8px;
+	margin-bottom: 25px;
+	text-shadow: 0 1px rgba(0,0,0,.3);
+	font-weight: normal;
+	font-size: 25px;
+}
+
+.m-minimal .b-countdown-part {
+	overflow: hidden;
+	margin-right: 1px;
+	padding: 10px 8px 8px;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	background: #d7d7d7;
+	background: linear-gradient(to top, #d7d7d7, #e8e8e8 );
+	box-shadow: 0 0 3px #e0e0e0;
+}
+
+.m-minimal .b-countdown__value {
+	margin-bottom: 4px;
+	color: #414141;
+	text-align: center;
+	text-shadow: 0 2px 2px rgba(255,255,255,0.4);
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.m-minimal .b-countdown__number {
+	display: inline-block;
+	text-transform: full-width;
+	-webkit-transform: scale(1.0, 1.5);
+	-moz-transform: scale(1.0, 1.5);
+	-ms-transform: scale(1.0, 1.5);
+	-o-transform: scale(1.0, 1.5);
+	transform: scale(1.0, 1.5);
+}
+
+.m-minimal .b-countdown__label {
+	color: #939393;
+	font-size: 10px;
+}
+
+.m-minimal .b-countdown__delimiter {
+	display: block;
+	padding: 13px 1px 13px 1px;
+	width: 12px;
+	color: #222;
+	font-size: 24px;
+}
+
+
+/**
+ **************************
+ GRAY
+ **************************
+*/
+.m-gray {
+	padding: 10px 30px;
+	width: 300px;
+	height: 160px;
+	background: #fdfdfd;
+}
+
+.m-gray .b-countdown__title {
+	margin-top: 8px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #d8d9dd;
+	color: #181d1f;
+	text-shadow: 0 2px 2px rgba(255,255,255,0.4);
+	font-size: 26px;
+}
+
+.m-gray .b-countdown-part {
+	overflow: hidden;
+	margin-right: 5px;
+	margin-left: 5px;
+	width: 65px;
+}
+
+.m-gray .b-countdown__value {
+	overflow: hidden;
+	border: 2px solid #d0d0d0;
+	border-radius: 6px;
+	background: #fefefe;
+}
+
+.m-gray .b-countdown__number {
+	display: inline-block;
+	margin: 13px auto;
+	padding: 3px 6px;
+	border-left: 1px solid #d0d0d0;
+	text-align: center;
+	text-transform: full-width;
+	text-shadow : 0 0 20px rgba(1,1,1,.5);
+	font-weight: bold;
+	font-size: 25px;
+	-webkit-transform: scale(1.0, 1.5);
+	-moz-transform: scale(1.0, 1.5);
+	-ms-transform: scale(1.0, 1.5);
+	-o-transform: scale(1.0, 1.5);
+	transform: scale(1.0, 1.5);
+}
+
+.m-gray .b-countdown__number:first-child {
+	border-left: none;
+}
+
+.m-gray .b-countdown__label {
+	margin: 5px auto;
+	font-size: 10px;
+}
+
+/*
+ **************************
+ * =.m-emark
+ **************************
+*/
+.m-emark.b-countdown {
+	width: 300px;
+}
+
+.m-emark .b-countdown__title {
+	margin: 0 0 15px;
+	padding: 10px 0;
+	background: #184d70;
+	font-size: 24px;
+}
+
+.m-emark .b-countdown-part {
+	margin-left: 18px;
+	width: 52px;
+}
+
+.m-emark .b-countdown-part:first-of-type {
+	margin-left: 20px;
+}
+
+.m-emark .b-countdown__value {
+	height: 50px;
+	border-bottom: 5px solid #bebebe;
+	background: #fff;
+	background: linear-gradient( #efefef 50%, #fff 50%);
+	background: -moz-linear-gradient( #efefef 50%, #fff 50%);
+	background: -webkit-linear-gradient( #efefef 50%, #fff 50%);
+	background: -o-linear-gradient( #efefef 50%, #fff 50%);
+	background: -ms-linear-gradient( #efefef 50%, #fff 50%);
+	color: #184d70;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 50px;
+}
+
+.m-emark .b-countdown__delimiter {
+	display: none;
+}
+
+.m-emark .b-countdown__label {
+	margin-top: 5px;
+	color: #fff;
+	font-weight: normal;
+	font-size: 12px;
+}
